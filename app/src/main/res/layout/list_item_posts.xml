@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="domainPosts"
+            type="com.example.users.domain.DomainPosts">
+
+        </variable>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/user_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@{domainPosts.title}"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Ventito eum qui decens tener aliqua ventosus vallum usque succedo consequatur." />
+
+            <TextView
+                android:id="@+id/body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@{domainPosts.body}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:layout_constraintVertical_bias="0.4"
+                tools:text="Aiunt ulterius vulticulus. Defendo truculenter sophismata. Qui solio aveho. Tersus calcar coniuratio. Vix patria audeo. Aptus porro cupiditas. Ademptio ceno atrocitas. Templum audacia vere. Taceo advenio cinis. Talis accusantium somniculosus. Repellendus quibusdam dolorum. Illo animi umerus. Earum amiculum adicio. Pariatur deporto aliqua. Coma vox inflammatio. Uberrime civitas damnatio. Tertius atavus arbitro. Aut avoco candidus. Velut et corona." />
+
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/body"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="#0000EE"
+                tools:text="User: 4258"
+                android:text="@{@string/user_id_post(domainPosts.userId)}"
+                android:layout_margin="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,99 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="domainUsers"
+            type="com.example.users.domain.DomainUsers">
+
+        </variable>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:elevation="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/gender_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/male"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/andika_new_basic_bold"
+                android:text="@{domainUsers.name}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/gender_image"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Aadrika Marar" />
+
+            <TextView
+                android:id="@+id/user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:text="@{@string/user_id_post(domainUsers.id)}"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@id/gender_image"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                tools:text="UID: 3641" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@{domainUsers.email}"
+                android:textColor="#0000EE"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@+id/gender_image"
+                app:layout_constraintTop_toBottomOf="@id/user_id"
+                tools:text="aadrika_marar@corkery-spencer.name" />
+
+            <ImageView
+                android:id="@+id/status"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:padding="4dp"
+                android:src="@drawable/online"
+                app:layout_constraintBottom_toBottomOf="@id/arrow"
+                app:layout_constraintEnd_toStartOf="@id/arrow"
+                app:layout_constraintTop_toTopOf="@id/arrow"
+                tools:src="@drawable/online" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/forward_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/email" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Users</string>
+    <string name="user_id_post">UID: %1$d</string>
+    <string name="no_posts">No posts to show</string>
+</resources>
