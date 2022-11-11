@@ -13,14 +13,6 @@ data class DatabaseUsers(
     val status: String
 )
 
-//@Entity(
-//    tableName = "posts_table", foreignKeys = [ForeignKey(
-//        entity = DatabaseUsers::class,
-//        parentColumns = arrayOf("id"),
-//        childColumns = arrayOf("userId"),
-//        onDelete = ForeignKey.CASCADE
-//    )]
-//)
 @Entity(tableName = "posts_table")
 data class DatabasePosts(
     @PrimaryKey

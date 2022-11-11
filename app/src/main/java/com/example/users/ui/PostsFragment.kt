@@ -1,11 +1,9 @@
 package com.example.users.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -45,17 +43,6 @@ class PostsFragment : Fragment() {
                 binding.noPosts.visibility = View.VISIBLE
             }
         }
-
-        //Log.i("PostsFragment", "user-id: ${args.userId}")
-
-//        detailViewModel.detail.observe(viewLifecycleOwner) {
-//            if (it == null) {
-//                binding.detailCardView.visibility = View.INVISIBLE
-//                binding.descriptionScroll.visibility = View.INVISIBLE
-//            } else {
-//                binding.loadingAnimation.visibility = View.INVISIBLE
-//            }
-//        }
 
         return binding.root
     }

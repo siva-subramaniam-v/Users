@@ -3,7 +3,6 @@ package com.example.users.viewmodels
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.users.util.bindRecyclerViewPosts
 
 class PostsViewModelFactory(val id: Long, private val application: Application) :
     ViewModelProvider.Factory {
